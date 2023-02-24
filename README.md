@@ -12,4 +12,6 @@ Este script foi criado para configurar rapidamente um projeto React, criando uma
 
 ## Aviso
 
-Este script foi desenvolvido para uso pessoal e ainda não foi testado em todas as situações possíveis. Use por sua conta e risco.```
+- Este script foi desenvolvido para uso pessoal e ainda não foi testado em todas as situações possíveis. Use por sua conta e risco.
+
+- Este script foi desenvolvido para uso dentro do ambiente linux.

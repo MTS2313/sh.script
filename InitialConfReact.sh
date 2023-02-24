@@ -13,7 +13,19 @@ fi
 mkdir -p ./src/components
 mkdir -p ./src/Pages/Home
 mkdir -p ./src/Pages/Home/Styles
-mkdir -p ./src/assets/default.config.css
+mkdir -p ./src/assets/
+
+# Verificar se o aquivo ./src/assets/default.config.css já existe. Se não, cria-o.
+if [ ! -f "./src/assets/default.config.css" ]
+then
+    touch ./src/assets/default.config.css
+    echo "*{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }" >> ./src/assets/default.config.css
+fi
+
 
 # Verifica se o arquivo ./src/Pages/Home/Home.jsx já existe. Se não, cria-o.
 if [ ! -f "./src/Pages/Home/Home.jsx" ]
