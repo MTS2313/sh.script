@@ -53,8 +53,20 @@ else
     touch ./src/Pages/Home/Styles/Home.Style.css
 fi
 
-# Cria o arquivo ./src/main.jsx.
-touch ./src/main.jsx
+# Verifica se já existe o arquivo .src/main.jsx, sé nao ele cria.
+if [ ! -f "./src/main.jsx" ]
+then
+    touch ./src/main.jsx
+    echo "import ReactDOM from "react-dom/client";
+import React from "react";
+import Home from "./Pages/Home/Home";
+import "./assets/default.config.css"
+const root = ReactDOM.createRoot(document.getElementById("root")).render(
+  <>
+    <Home />
+  </>
+);" >> ./src/main.jsx
+fi
 
 # Mensagem informando ao usuário que a configuração inicial foi concluída.
 echo "Configuração inicial do projeto concluída com sucesso."
